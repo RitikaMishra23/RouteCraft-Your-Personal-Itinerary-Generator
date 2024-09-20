@@ -1,0 +1,148 @@
+{% extends "headers.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteCraft</title>
+    <style>
+        body {
+            background-image: url('static/background.PNG'); /* Add your image URL here */
+            background-size: cover; /* Ensures the image covers the entire page */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+           
+        }
+        .form-control {
+            background-color: white; /* White background for input fields */
+            color: black; /* Black text color for input fields */
+            border: 1px solid #ccc; /* Light grey border for input fields */
+        }
+
+        .form-control::placeholder {
+            color: black; /* Black placeholder text color */
+        }
+
+        .btn-primary {
+            background-color: lightgrey; /* Light grey background for the submit button */
+            color: black; /* Black text color for the submit button */
+            border-color: lightgrey; /* Light grey border for the submit button */
+        }
+
+        .btn-primary:hover {
+            background-color: grey; /* Darker grey background on hover */
+            color: black; /* Ensure text remains black on hover */
+        }
+        .form-group label{
+            color: black;
+            font-weight: bold; 
+        }
+        h1 {
+            font-family: 'Alice', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .form-control::placeholder {
+            color: rgb(8, 8, 8);
+        }
+        .form-group input {
+            width: 250px; 
+        }
+        .form-group span {
+            width: 200px;
+        }
+        #source::placeholder, #destination::placeholder {
+            color: black; /* Black color for specific placeholder text */
+        }
+        .loading-container {
+            margin-bottom: 150px; /* Move the loading gif upwards */
+        }
+
+        #loading {
+            display: block;
+            margin: 0 auto; 
+            width: 80px; /* Reduce the size of the gif */
+            height: 80px;/* Center the gif */
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center">RouteCraft</h1>
+                </div>
+            </div>
+            <form action="/" method="POST" class="form-inline">
+                <div class="form-group">
+                    <label for="source">From:</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="source"
+                        id="source"
+                        placeholder="Enter your boarding point"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="destination">To:</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="destination"
+                        id="destination"
+                        placeholder="Enter your destination"
+                        required
+                    />
+                </div>
+                <span class="form-group">
+                    <label for="date">Travel Date:</label>
+                    <input type="date" class="form-control" name="date" id="date" required />
+                    <label for="return">Return Date:</label>
+                    <input type="date" class="form-control" name="return" id="return" required />
+                </span>
+                <button style="margin-top: 5px; padding: 4px;" type="submit" class="btn btn-primary">Submit</button>
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <img id="loading" style="display: none;" src="{{url_for('static', filename='loading.gif')}}" alt="Loading..." />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="jumbotron text-center text-white fixed-bottom" style="background-color:transparent;">
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0);">
+            
+            <p>
+                Made With ❤️ By
+                <a style="color: #070707d6; text-decoration: none;" href="#">Ritika</a>
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        setTimeout(function () {
+            const alerts = document.querySelectorAll(".alert");
+            alerts.forEach(function (alert) {
+                alert.style.opacity = 0;
+            });
+            setTimeout(function () {
+                alerts.forEach(function (alert) {
+                    alert.style.display = "none";
+                });
+            }, 1000);
+        }, 5000);
+        document.querySelector('form').addEventListener('submit', function() {
+            document.getElementById('loading').style.display = 'block';
+        });
+    </script>
+{% endblock %}
+</body>
+</html>

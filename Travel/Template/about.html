@@ -1,0 +1,104 @@
+{% extends "headers.html" %}
+{% block content %}
+
+<!-- Main Content -->
+<main>
+  <h2 class="text-center" style="font-weight: bold; font-size: 3em;"> About Us</h2> <!-- Increased font weight and size -->
+  <style>
+    body {
+      position: relative;
+      background-image: url('static/images.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:transparent;
+      z-index: -1; 
+    }
+
+ 
+     .hide-text {
+      display: none;
+    }
+    .card-text {
+      font-style: italic;
+    }
+
+    .card {
+      background-color: white; /* Semi-transparent white */
+      border: none;
+      padding:5%;
+      
+      max-width: 80%; /* Limit the card's width */
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);  /* Center the card horizontally */
+    }
+
+    footer {
+      position: fixed; /* Keep the footer fixed at the bottom */
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Full width of the page */
+      background-color: transparent;
+    }
+  </style>
+  </head>
+
+  <body>
+
+
+    <div class="card border-primary" style="border-left-width: thick">
+
+
+
+      <p class="card-text">
+        Welcome to RouteCraft, your premier destination for bespoke travel planning and effortless itinerary creation.
+        At RouteCraft, we recognize that each journey is one-of-a-kind, and we’re committed to offering you the tools
+        and resources necessary to make your travel experience truly exceptional.
+
+      </p>
+      <p class="card-text">
+        Our mission is to simplify travel planning and cater to budget-conscious travelers, ensuring a straightforward
+        and intuitive process. Whether you're embarking on a solo adventure, organizing a family vacation,
+        or coordinating a group getaway, our platform assists you in crafting customized itineraries that align
+        perfectly
+        with your interests and preferences.
+      </p>
+      <p class="card-text">
+        By harnessing cutting-edge technology, RouteCraft elevates travel planning to new heights. Through the
+        integration
+        of artificial intelligence, data analysis, and an intuitive user interface, we provide unparalleled convenience
+        and efficiency.
+        From tailored destination suggestions to real-time updates, budget management, and offline access,
+        we strive to deliver a seamless travel experience from start to finish.
+      </p>
+      <p class="card-text">
+        As passionate travel enthusiasts at RouteCraft, we are dedicated to making every journey exciting and memorable.
+        Embark on this incredible adventure with us and explore the world like never before!
+      </p>
+      <p class="card-text">
+        Don’t let your dream destination remain a distant dream.
+        Begin your journey with RouteCraft today
+        -Your dream gateway is just a step away!
+      </p>
+    </div>
+    </div>
+</main>
+
+<!-- Footer -->
+
+<footer class="jumbotron">
+  <!-- Footer content removed -->
+</footer>
+{% endblock %}
+</body>
+
+</html>
