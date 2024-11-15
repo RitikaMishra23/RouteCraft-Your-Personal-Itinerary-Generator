@@ -7,9 +7,13 @@ Welcome to RouteCraft, your one-stop solution for planning the perfect trip! Whe
 ## Features
 
 **User Authentication:** Secure login system for personalized experiences.
+
 **Personalized Recommendations:** Tailored itineraries based on your interests, trip budget, and duration.
+
 **Weather Integration:** Real-time weather updates for your destination to help you plan better.
+
 **Real-Time Data:** Leveraging travel APIs for accommodation, activities, and travel route suggestions.
+
 **User-Friendly Interface:** Intuitive design for seamless trip planning.
 
 ## Project Structure
@@ -65,7 +69,9 @@ Obtain API keys for the weather and travel services (e.g., OpenWeather, Google M
 Create a .env file in the root directory and add your keys:
 
 WEATHER_API_KEY=your_weather_api_key
+
 TRAVEL_API_KEY=your_travel_api_key
+
 ### 4. Run the Application
 Start the Flask application:
 bash
@@ -74,14 +80,23 @@ The app will run at http://127.0.0.1:5000.
 
 ## Usage
 **Sign Up/Login:** Create an account or log in to your existing account.
+
 **Input Preferences:** Enter details like budget, trip duration, and interests.
+
 **Get Your Itinerary:** View and download your personalized travel itinerary.
+
 **Weather Insights:** Check real-time weather conditions for your travel destination.
+
 ##Technologies Used
+
 **Backend:** Flask (Python)
+
 **Frontend:** HTML, CSS, JavaScript
+
 **APIs:** OpenWeather, Google Maps, Travel APIs
+
 **Database:** SQLite (or other DBMS if configured)
+
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
