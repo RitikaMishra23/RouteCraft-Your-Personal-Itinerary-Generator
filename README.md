@@ -18,22 +18,37 @@ Welcome to RouteCraft, your one-stop solution for planning the perfect trip! Whe
 RouteCraft/
 │
 ├── app.py                 # Main Flask application
+
 ├── gen.py                 # Generative model for creating itineraries
+
 ├── templates/             # HTML templates for rendering pages
+
 │   ├── index.html         # Landing page
+
 │   ├── dashboard.html     # User dashboard with personalized itinerary
+
 │   ├── login.html         # User login page
+
 │   └── ...                # Other HTML pages
+
 │
 ├── static/                # Static assets like CSS, JS, and images
+
 │   ├── css/
+
 │   ├── js/
+
+
 │   └── images/
 │
 ├── requirements.txt       # Python dependencies
+
 ├── README.md              # Project documentation
+
 ├── .gitignore             # Files and directories to ignore in Git
+
 └── ...                    # Other supporting files
+
 ## Installation and Setup
 ### 1. Clone the Repository
 bash
