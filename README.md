@@ -56,7 +56,8 @@ RouteCraft/
 ## Installation and Setup
 ### 1. Clone the Repository
 bash
-git clone https://github.com/yourusername/routecraft.git
+git clone https://github.com/RitikaMishra23/RouteCraft-Your-Personal-Itinerary-Generator.git
+
 cd routecraft
 ### 2. Install Dependencies
 Make sure you have Python 3.7 or higher installed. Then, install the required dependencies:
@@ -87,7 +88,7 @@ The app will run at http://127.0.0.1:5000.
 
 **Weather Insights:** Check real-time weather conditions for your travel destination.
 
-##Technologies Used
+## Technologies Used
 
 **Backend:** Flask (Python)
 
